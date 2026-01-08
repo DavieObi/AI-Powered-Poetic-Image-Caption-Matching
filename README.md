@@ -1,5 +1,3 @@
----
-
 # Aesthetic Image–Text Alignment for Poetic Caption Recommendation
 
 ## Overview
@@ -43,62 +41,58 @@ The system embeds:
 
 into a **shared semantic space**, then measures how closely each caption aligns with the image.
 
-The output is a ranked list of captions, ordered by semantic similarity.
-
 Key characteristics:
 
 * Captions are **not generated**
 * Captions are **selected** from a predefined set
-* Ranking is based on **conceptual alignment**, not keywords
+* Ranking is based on **conceptual alignment**, not literal description
 
 ---
 
-## Process Overview: From Literal Description to Poetic Alignment
+## Process Overview
 
-### Step 1: Validating Literal Image–Text Matching
+### Step 1: Validating Literal Alignment
 
-The project began by validating the technical pipeline using **literal, descriptive captions** that explicitly referenced visible elements in the image (e.g., people, walkways, greenery, buildings).
+The project began by validating the pipeline using literal, descriptive captions to confirm that image–text similarity was working correctly.
 
-This step ensured that:
+This ensured:
 
 * Image embeddings were generated correctly
 * Text embeddings shared the same semantic space
-* Cosine similarity produced meaningful rankings
-
-Once this baseline was confirmed, the focus shifted from correctness to creativity.
+* Similarity ranking behaved as expected
 
 ---
 
-### Step 2: Reframing the Objective
+### Step 2: Shifting to Poetic Intent
 
-Rather than asking:
+Once validated, the objective was reframed from literal description to emotional interpretation.
+
+Instead of asking:
 
 > *“What does this image show?”*
 
-The objective was reframed to:
+The system asks:
 
 > **“What emotion or atmosphere does this image convey?”**
 
 At this stage:
 
-* All candidate captions were rewritten to be **poetic and mood-based**
-* Captions avoided naming objects, locations, or actions
-* Emphasis was placed on emotion, symbolism, and interpretation
-
-This reframing mirrors real-world captioning behavior on social media.
+* Captions were rewritten to be poetic and abstract
+* Object names and literal references were removed
+* Emphasis was placed on mood, reflection, and storytelling
 
 ---
 
-### Step 3: Poetic Caption Selection via Semantic Similarity
+### Step 3: Poetic Caption Selection
 
-The system then evaluated how well each poetic caption semantically aligned with the image.
+The system evaluates how well each poetic caption aligns with the image using semantic similarity.
 
-Although these captions do not describe visible elements directly, the model associates abstract language with visual cues such as:
+Even without direct visual references, the model associates abstract language with:
 
-* calm pedestrian movement
-* greenery within urban infrastructure
-* quiet transitions
-* everyday journeys
+* calm movement
+* urban stillness
+* greenery within infrastructure
+* everyday transitions
 
 ---
 
@@ -114,63 +108,29 @@ Although these captions do not describe visible elements directly, the model ass
 5. Every step has a story. (0.2128)
 ```
 
-### What These Results Show
+### Interpretation
 
-#### Conceptual Over Literal Alignment
+* The highest-ranked captions reflect **conceptual and emotional alignment**, not object recognition.
+* Lower similarity scores are expected for poetic text and do not indicate poor performance.
+* Ranking order is more meaningful than absolute values.
 
-The highest-ranked caption — *“Where concrete learns to coexist with green.”* — reflects strong conceptual overlap between the image and the text.
-
-Without describing any objects explicitly, it aligns with:
-
-* visible greenery
-* surrounding urban structures
-* the balance between nature and city life
-
-This demonstrates that the system captures **abstract relationships**, not just object-level features.
-
----
-
-#### Mood and Atmosphere Recognition
-
-Captions such as *“A pause in the rush of the city”* and *“The city breathes when you slow down”* score highly because the image conveys:
-
-* calm, unhurried movement
-* absence of visual chaos
-* a reflective urban atmosphere
-
-The similarity rankings confirm that the model recognizes emotional tone, not just visual content.
-
----
-
-#### Interpreting Similarity Scores
-
-Poetic captions naturally yield **lower similarity scores** than literal descriptions. This is expected and not a limitation.
-
-Reasons include:
-
-* Abstract language has fewer direct visual anchors
-* Emotional interpretation is inherently broader
-* Multiple captions may be equally valid
-
-In this context, **relative ranking** is more meaningful than absolute score values.
+These results show that multimodal models can capture **aesthetic and emotional signals**, not just literal content.
 
 ---
 
 ## What This Project Is (and Is Not)
 
-### This project **is**:
+### This project is:
 
 * A multimodal image–text alignment system
-* Focused on mood, tone, and aesthetic interpretation
-* Suitable for creative and social media use cases
-* An application of pretrained vision–language models
+* Focused on mood, tone, and interpretation
+* Suitable for creative and social media use
 
-### This project **is not**:
+### This project is not:
 
 * A traditional image caption generator
-* An object detection or labeling system
+* An object detection system
 * A fine-tuned or custom-trained model
-* Designed for accessibility or factual annotation
 
 ---
 
@@ -180,24 +140,12 @@ In this context, **relative ranking** is more meaningful than absolute score val
 * Creative writing inspiration
 * Visual storytelling tools
 * Mood-based content curation
-* AI-assisted lifestyle and photography platforms
-
----
-
-## Limitations
-
-* Output quality depends heavily on the quality of candidate captions
-* Cultural and emotional interpretation can vary
-* The system does not generate new captions
-* Abstract alignment is subjective by nature
 
 ---
 
 ## Key Takeaway
 
-This project demonstrates that multimodal AI can be used not only for *describing* the world, but also for *interpreting* it.
-
-By shifting from literal captions to poetic alignment, the system reflects how humans naturally engage with images in creative contexts.
+This project demonstrates that multimodal AI can be used not only for describing images, but also for interpreting them in creative and human-centered ways.
 
 ---
 
@@ -205,6 +153,3 @@ By shifting from literal captions to poetic alignment, the system reflects how h
 
 **David Obi**
 Data Scientist | Machine Learning Engineer
-Focused on practical, creative, and human-centered AI applications
-
----
